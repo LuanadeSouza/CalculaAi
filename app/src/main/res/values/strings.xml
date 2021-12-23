@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CalculaCompra</string>
+    <string name="descricao">Descrição</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="valor">Valor</string>
+    <string name="total">Total</string>
+</resources>
