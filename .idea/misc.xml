@@ -3,11 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/drawer_item_color.xml" value="0.37435897435897436" />
         <entry key="app/src/main/res/drawable/ic_add.xml" value="0.37435897435897436" />
+        <entry key="app/src/main/res/drawable/ic_check_circle_96dp.xml" value="0.3802083333333333" />
+        <entry key="app/src/main/res/drawable/ic_done.xml" value="0.37435897435897436" />
+        <entry key="app/src/main/res/drawable/ic_edit.xml" value="0.37435897435897436" />
+        <entry key="app/src/main/res/drawable/ic_filter_list.xml" value="0.37435897435897436" />
+        <entry key="app/src/main/res/drawable/ic_list.xml" value="0.37435897435897436" />
+        <entry key="app/src/main/res/drawable/ic_statistics.xml" value="0.37435897435897436" />
+        <entry key="app/src/main/res/drawable/ic_verified_user_96dp.xml" value="0.3802083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/add_lista_compra_fragment.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/detalhe_lista_compra_fragment.xml" value="0.3640625" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.35" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.3640625" />
         <entry key="app/src/main/res/layout/list_item_produto.xml" value="0.35846153846153844" />
+        <entry key="app/src/main/res/layout/lista_compra_fragment.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/lista_compra_item.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/lista_compras_activity.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/produto_item.xml" value="0.35846153846153844" />
+        <entry key="app/src/main/res/layout/static_fragment.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/drawer_actions.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/drawer_actions_menu.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/menu/filter_list_compra.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/lista_compra_detalhes_menu.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/lista_compra_menu.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/lista_compras_menu.xml" value="0.3640625" />
       </map>
     </option>
   </component>

@@ -1,0 +1,60 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="" />
+    </data>
+
+    <br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:onRefreshListener="@{viewmodel::refresh}"
+        app:refreshing="@{viewmodel.dataLoading}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_level_15">
+
+            <LinearLayout
+                android:id="@+id/statistics_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.dataLoading ? View.GONE : View.VISIBLE}">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/statistics_no_lista_compras"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="@{viewmodel.empty ? View.VISIBLE : View.GONE}" />
+
+                <TextView
+                    android:id="@+id/stats_active_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:text="@{@string/statistics_active_lista_compras(viewmodel.activeTasksPercent)}"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="@{viewmodel.empty ? View.GONE : View.VISIBLE}" />
+
+                <TextView
+                    android:id="@+id/stats_completed_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:text="@{@string/statistics_completed_lista_compras(viewmodel.completedTasksPercent)}"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="@{viewmodel.empty ? View.GONE : View.VISIBLE}" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout>
+</layout>

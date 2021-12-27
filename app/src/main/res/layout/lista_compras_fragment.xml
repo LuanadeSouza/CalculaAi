@@ -5,11 +5,13 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <import type="androidx.core.content.ContextCompat" />
 
         <variable
             name="viewmodel"
-            type="br.com.luanadev.calculacompra.HomeViewModel" />
+            type="br.com.luanadev.calculacompra.presentation.listacompra.ListaComprasViewModel" />
 
     </data>
 
@@ -49,12 +51,12 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/tasks_list"
+                        android:id="@+id/list_compras"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:items="@{viewmodel.items}"
-                        tools:listitem="@layout/produto_item"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/produto_item" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -71,7 +73,7 @@
                         android:layout_height="96dp"
                         android:layout_gravity="center"
                         android:contentDescription="@string/no_image_content_description"
-                        android:src="@{ContextCompat.getDrawable(context, viewmodel.noTaskIconRes)}" />
+                        android:src="@{ContextCompat.getDrawable(context, viewmodel.noListaComprasIconRes)}" />
 
                     <TextView
                         android:id="@+id/no_tasks_text"
@@ -79,14 +81,14 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginBottom="@dimen/spacing_level_8"
-                        android:text="@{context.getString(viewmodel.noTasksLabel)}" />
+                        android:text="@{context.getString(viewmodel.noListaComprasLabel)}" />
                 </LinearLayout>
             </RelativeLayout>
 
         </br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/add_task_fab"
+            android:id="@+id/add_lista_compra_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_level_15"
