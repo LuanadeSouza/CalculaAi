@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_level_5">5dp</dimen>
+    <dimen name="spacing_level_15">15dp</dimen>
+    <dimen name="spacing_level_25">25dp</dimen>
+
+</resources>
