@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.luanadev.calculacompra.databinding.HomeFragmentBinding
 import by.kirich1409.viewbindingdelegate.viewBinding
-import kotlinx.android.synthetic.main.list_item_produto.*
-import net.objecthunter.exp4j.ExpressionBuilder
 
 class HomeFragment : Fragment() {
 
@@ -28,7 +26,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun init() {}
-
 
 
 }

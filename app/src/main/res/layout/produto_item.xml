@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="viewmodel"
+            type="br.com.luanadev.calculacompra.addedittask.AddEditTaskViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/descrição"
+            android:id="@+id/description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_level_15"
@@ -29,6 +31,7 @@
             android:hint="@string/tipo"
             android:maxLength="15"
             android:maxLines="1"
+            android:text="@={viewmodel.description}"
             app:layout_constraintEnd_toStartOf="@+id/quantidade"
             app:layout_constraintStart_toStartOf="@+id/descricao_txt"
             app:layout_constraintTop_toBottomOf="@+id/descricao_txt" />
@@ -47,10 +50,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_level_15"
-            android:layout_marginEnd="@dimen/spacing_level_5"
+            android:layout_marginEnd="5dp"
             android:hint="@string/quantidades"
             android:maxLength="10"
             android:maxLines="1"
+            android:text="@={viewmodel.quantidade}"
             app:layout_constraintEnd_toStartOf="@+id/valor"
             app:layout_constraintStart_toStartOf="@+id/quantidade_txt"
             app:layout_constraintTop_toBottomOf="@+id/quantidade_txt" />
@@ -73,6 +77,7 @@
             android:hint="@string/zero"
             android:maxLength="10"
             android:maxLines="1"
+            android:text="@={viewmodel.valor}"
             app:layout_constraintEnd_toStartOf="@+id/result"
             app:layout_constraintStart_toStartOf="@+id/valor_txt"
             app:layout_constraintTop_toBottomOf="@+id/valor_txt" />
@@ -96,6 +101,7 @@
             android:hint="@string/zero"
             android:maxLength="10"
             android:maxLines="1"
+            android:text="@={viewmodel.result}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/total_txt"
             app:layout_constraintTop_toBottomOf="@+id/total_txt" />

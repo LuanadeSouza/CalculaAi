@@ -1,8 +1,8 @@
-package br.com.luanadev.calculacompra.data.source
+package br.com.luanadev.calculacompra.data.source.produto
 
 import androidx.lifecycle.LiveData
 import br.com.luanadev.calculacompra.data.Result
-import br.com.luanadev.calculacompra.data.Produtos
+import br.com.luanadev.calculacompra.data.entity.produto.Produtos
 
 interface ProdutoDataSource {
     fun observeProduto(): LiveData<Result<List<Produtos>>>
@@ -22,22 +22,4 @@ interface ProdutoDataSource {
     suspend fun deleteAllProdutos()
 
     suspend fun deleteProduto(produtoId: String)
-
-    suspend fun refreshListaCompras(listaCompraId: String)
-
-    suspend fun refreshListaCompras()
-
-    suspend fun deleteAllListaCompras()
-
-    suspend fun deleteListaCompras(listaCompraId: String)
-
-    suspend fun completeListaCompras(listaCompraId: Produtos)
-
-    suspend fun completeListaCompras(produtoId: String)
-
-    suspend fun activateListaCompras(produto: Produtos)
-
-    suspend fun activateListaCompras(listaCompraId: String)
-
-    suspend fun clearCompletedListaCompras()
 }

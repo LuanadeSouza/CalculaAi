@@ -1,18 +1,18 @@
-package br.com.luanadev.calculacompra.data.source.local
+package br.com.luanadev.calculacompra.data.source.produto.local
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
-import br.com.luanadev.calculacompra.data.Produtos
+import br.com.luanadev.calculacompra.data.entity.produto.Produtos
 import br.com.luanadev.calculacompra.data.Result
-import br.com.luanadev.calculacompra.data.Result.Success
 import br.com.luanadev.calculacompra.data.Result.Error
-import br.com.luanadev.calculacompra.data.source.ProdutoDataSource
+import br.com.luanadev.calculacompra.data.Result.Success
+import br.com.luanadev.calculacompra.data.source.produto.ProdutoDataSource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 
-class ProdutosLocalDataSource internal constructor(
+class ProdutoLocalDataSource internal constructor(
     private val produtoDao: ProdutoDao,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : ProdutoDataSource {
@@ -61,42 +61,9 @@ class ProdutosLocalDataSource internal constructor(
         produtoDao.insertProduto(produto)
     }
 
-    override suspend fun completeListaCompras(produto: Produtos) = withContext(ioDispatcher) {
-        produtoDao.updateCompleted(produto.itemId, true)
-    }
-
-    override suspend fun completeListaCompras(produtoId: String) {
-        produtoDao.updateCompleted(produtoId, true)
-    }
-
-    override suspend fun activateListaCompras(produto: Produtos) = withContext(ioDispatcher) {
-        produtoDao.updateCompleted(produto.itemId, false)
-    }
-
-    override suspend fun activateListaCompras(produtoId: String) {
-        produtoDao.updateCompleted(produtoId, false)
-    }
-
-    override suspend fun clearCompletedListaCompras() = withContext<Unit>(ioDispatcher) {
-        produtoDao.deleteCompletedListaCompras()
-    }
-
-    override suspend fun deleteAllListaCompras() = withContext(ioDispatcher) {
-        produtoDao.deleteListaCompras()
-    }
-
-    override suspend fun deleteListaCompras(listaCompraId: String) =
-        withContext<Unit>(ioDispatcher) {
-            produtoDao.deleteListaComprasById(listaCompraId)
-        }
-
     override suspend fun deleteProduto(produtoId: String) = withContext<Unit>(ioDispatcher) {
         produtoDao.deleteProdutoById(produtoId)
     }
-
-    override suspend fun refreshListaCompras(listaCompraId: String) {}
-
-    override suspend fun refreshListaCompras() {}
 
     override suspend fun deleteAllProdutos() = withContext(ioDispatcher) {
         produtoDao.deleteProdutos()
