@@ -15,7 +15,7 @@ import br.com.luanadev.calculacompra.util.setupSnackbar
 import com.google.android.material.snackbar.Snackbar
 import timber.log.Timber
 
-class ListaCompraFragment : Fragment() {
+class ListaComprasFragment : Fragment() {
 
     private val viewModel by viewModels<ListaComprasViewModel>()
     private val listaCompraArgs: ListaComprasFragmentArgs by navArgs()
@@ -70,14 +70,14 @@ class ListaCompraFragment : Fragment() {
             openListaComprasDetails(it)
         })
         viewModel.newListaComprasEvent.observe(viewLifecycleOwner, EventObserver {
-            navigateToAddNewListaCompras()
+            navigateToAddNewListaCompra()
         })
     }
 
     private fun setupSnackbar() {
         view?.setupSnackbar(this, viewModel.snackbarText, Snackbar.LENGTH_SHORT)
         arguments?.let {
-            viewModel.showEditResultMessage(args.userMessage)
+            viewModel.showEditResultMessage(listaCompraArgs.userMessage)
         }
     }
 
@@ -101,16 +101,16 @@ class ListaCompraFragment : Fragment() {
     }
 
     private fun setupFab() {
-        binding.addListaComprasFab.setOnClickListener {
+        binding.addListaCompraFab.setOnClickListener {
             navigateToAddNewListaCompra()
         }
     }
 
     private fun navigateToAddNewListaCompra() {
         val action = ListaComprasFragmentDirections
-            .actionListaComprasFragmentToAddEditListaComprasFragment(
+            .actionListaComprasFragmentToAddEditlistaComprasFragment(
                 null,
-                resources.getString(R.string.add_lista_compra)
+                resources.getString(R.string.add_lista_compras)
             )
         findNavController().navigate(action)
     }
@@ -126,8 +126,8 @@ class ListaCompraFragment : Fragment() {
     private fun setupListAdapter() {
         val viewModel = binding.viewmodel
         if (viewModel != null) {
-            listAdapter = ListaComprasAdapter(viewModel)
-            binding.listaComprassList.adapter = listAdapter
+            adapter = ListaComprasAdapter(viewModel)
+            binding.listCompras.adapter = adapter
         } else {
             Timber.w("ViewModel not initialized when attempting to set up adapter.")
         }

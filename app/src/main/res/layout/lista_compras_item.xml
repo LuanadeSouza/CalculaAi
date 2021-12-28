@@ -8,11 +8,11 @@
 
         <variable
             name="listaCompra"
-            type=" " />
+            type="br.com.luanadev.calculacompra.data.entity.listacompra.ListaCompras" />
 
         <variable
             name="viewmodel"
-            type=" " />
+            type="br.com.luanadev.calculacompra.presentation.listacompra.ListaComprasViewModel " />
     </data>
 
     <LinearLayout
@@ -21,14 +21,14 @@
         android:orientation="horizontal"
         android:paddingVertical="@dimen/spacing_level_15"
         android:paddingHorizontal="@dimen/spacing_level_8"
-        android:onClick="@{() -> viewmodel.openTask(listaCompra.id)}">
+        android:onClick="@{() -> viewmodel.openListaCompras(listaCompra.listaComprasId)}">
 
         <CheckBox
             android:id="@+id/complete_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:onClick="@{(view) -> viewmodel.completeTask(listaCompra, ((CompoundButton)view).isChecked())}"
+            android:onClick="@{(view) -> viewmodel.completeListaCompras(listaCompra, ((CompoundButton)view).isChecked())}"
             android:checked="@{listaCompra.completed}" />
 
         <TextView

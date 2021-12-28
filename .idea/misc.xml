@@ -21,6 +21,8 @@
         <entry key="app/src/main/res/layout/lista_compra_fragment.xml" value="0.3640625" />
         <entry key="app/src/main/res/layout/lista_compra_item.xml" value="0.3640625" />
         <entry key="app/src/main/res/layout/lista_compras_activity.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/lista_compras_fragment.xml" value="0.3640625" />
+        <entry key="app/src/main/res/layout/lista_compras_item.xml" value="0.3640625" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.3640625" />
         <entry key="app/src/main/res/layout/produto_item.xml" value="0.35846153846153844" />
         <entry key="app/src/main/res/layout/static_fragment.xml" value="0.3640625" />
@@ -29,6 +31,7 @@
         <entry key="app/src/main/res/menu/filter_list_compra.xml" value="0.3640625" />
         <entry key="app/src/main/res/menu/lista_compra_detalhes_menu.xml" value="0.3640625" />
         <entry key="app/src/main/res/menu/lista_compra_menu.xml" value="0.3640625" />
+        <entry key="app/src/main/res/menu/lista_compras_details_menu.xml" value="0.3640625" />
         <entry key="app/src/main/res/menu/lista_compras_menu.xml" value="0.3640625" />
       </map>
     </option>

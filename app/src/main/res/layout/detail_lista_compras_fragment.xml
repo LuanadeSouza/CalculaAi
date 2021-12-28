@@ -10,7 +10,7 @@
 
         <variable
             name="viewmodel"
-            type="" />
+            type="br.com.luanadev.calculacompra.presentation.listacompraDetail.DetailListaComprasViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@id/task_detail_complete_checkbox"
                         android:paddingTop="1dp"
-                        android:text="@{viewmodel.task.title}"
+                        android:text="@{viewmodel.listaCompras.nome}"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
 
                     <TextView
@@ -80,7 +80,7 @@
                         android:layout_below="@id/task_detail_title_text"
                         android:layout_toRightOf="@id/task_detail_complete_checkbox"
                         android:paddingTop="1dp"
-                        android:text="@{viewmodel.task.description}"
+                        android:text="@{viewmodel.listaCompras.description}"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 </RelativeLayout>
@@ -88,7 +88,7 @@
         </br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/edit_task_fab"
+            android:id="@+id/edit_lista_compra_detail_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_level_15"

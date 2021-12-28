@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="" />
+            type="br.com.luanadev.calculacompra.presentation.listacompra.ListaComprasViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/spacing_level_15"
             android:src="@drawable/ic_done"
-            android:onClick="@{() -> viewmodel.saveTask()}"
+            android:onClick="@{() -> viewmodel.saveListaCompras()}"
             app:fabSize="normal"
             app:layout_anchor="@id/refresh_layout"
             app:layout_anchorGravity="bottom|right|end" />
