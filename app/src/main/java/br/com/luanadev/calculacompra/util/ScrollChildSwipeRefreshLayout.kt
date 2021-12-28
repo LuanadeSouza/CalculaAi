@@ -1,4 +1,4 @@
-package br.com.luanadev.calculacompra
+package br.com.luanadev.calculacompra.util
 
 import android.content.Context
 import android.util.AttributeSet

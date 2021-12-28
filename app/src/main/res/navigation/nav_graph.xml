@@ -10,7 +10,7 @@
         android:label="Lista Compras Details">
         <action
             android:id="@+id/action_listaComprasDetailFragment_to_addEditTaskFragment"
-            app:destination="@id/add_edit_lista_compras_fragment_dest" />
+            app:destination="@id/add_lista_compras_fragment_dest" />
         <argument
             android:name="listaCompraId"
             app:argType="string" />
@@ -37,16 +37,16 @@
             android:id="@+id/action_listaComprasFragment_to_listaComprasDetailFragment"
             app:destination="@id/lista_compras_detail_fragment_dest" />
         <action
-            android:id="@+id/action_listaComprasFragment_to_addEditlistaComprasFragment"
-            app:destination="@id/add_edit_lista_compras_fragment_dest" />
+            android:id="@+id/action_listaComprasFragment_to_addListaComprasFragment"
+            app:destination="@id/add_lista_compras_fragment_dest" />
         <argument
             android:name="userMessage"
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/add_edit_lista_compras_fragment_dest"
-        android:name=""
+        android:id="@+id/add_lista_compras_fragment_dest"
+        android:name="br.com.luanadev.calculacompra.presentation.addlistacompras.AddListaComprasFragment"
         android:label="{title}">
         <argument
             android:name="listaCompraId"
@@ -57,7 +57,7 @@
             app:argType="string"
             app:nullable="false" />
         <action
-            android:id="@+id/action_addEditlistaComprasFragment_to_listaComprasFragment"
+            android:id="@+id/action_addListaComprasFragment_to_listaComprasFragment"
             app:destination="@id/lista_compras_fragment_dest" />
     </fragment>
     <argument

@@ -78,7 +78,7 @@ object ListaComprasRemoteDataSource : ListaComprasDataSource {
 
     override suspend fun completeListaCompras(listaCompra: ListaCompras) {
         val completeListaCompras =
-            ListaCompras(listaCompra.nome, listaCompra.isCompleted, listaCompra.listaComprasId)
+            ListaCompras(listaCompra.title, listaCompra.isCompleted, listaCompra.listaComprasId)
         LISTA_COMPRAS_SERVICE_DATA[listaCompra.listaComprasId] = completeListaCompras
     }
 
@@ -88,7 +88,7 @@ object ListaComprasRemoteDataSource : ListaComprasDataSource {
 
     override suspend fun activateListaCompras(listaCompra: ListaCompras) {
         val listaCompras =
-            ListaCompras(listaCompra.nome, listaCompra.isCompleted, listaCompra.listaComprasId)
+            ListaCompras(listaCompra.title, listaCompra.isCompleted, listaCompra.listaComprasId)
         LISTA_COMPRAS_SERVICE_DATA[listaCompras.listaComprasId] = listaCompras
     }
 

@@ -19,7 +19,7 @@
         android:layout_height="match_parent">
 
 
-        <br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout
+        <br.com.luanadev.calculacompra.util.ScrollChildSwipeRefreshLayout
             android:id="@+id/refresh_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@id/task_detail_complete_checkbox"
                         android:paddingTop="1dp"
-                        android:text="@{viewmodel.listaCompras.nome}"
+                        android:text="@{viewmodel.listaCompras.title}"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
 
                     <TextView
@@ -85,7 +85,7 @@
 
                 </RelativeLayout>
             </LinearLayout>
-        </br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout>
+        </br.com.luanadev.calculacompra.util.ScrollChildSwipeRefreshLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/edit_lista_compra_detail_fab"

@@ -8,7 +8,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import br.com.luanadev.calculacompra.R
-import br.com.luanadev.calculacompra.ScrollChildSwipeRefreshLayout
 import com.google.android.material.snackbar.Snackbar
 
 fun View.showSnackbar(snackbarText: String, timeLength: Int) {
